@@ -1,0 +1,10 @@
+---
+name: Auchan Pro
+description: ''
+keywords: ''
+type: Magento
+documentation: ''
+images:
+- name: library_auchanpro-apache_latest
+  source: 10.0.0.1:5000/library/auchanpro-apache:latest
+  type: Default
