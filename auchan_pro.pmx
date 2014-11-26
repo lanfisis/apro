@@ -2,9 +2,13 @@
 name: Auchan Pro
 description: ''
 keywords: ''
-type: Magento
+type: Default
 documentation: ''
 images:
 - name: pro
   source: 10.0.0.1:5000/library/auchanpro-apache:latest
   type: Default
+  volumes:
+  - host_path: "/home/core/shared/auchan_pro"
+    container_path: "/var/auchan_pro"
+  command: "/etc/my_init.d/run.sh"
