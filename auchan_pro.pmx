@@ -1,14 +1,20 @@
 ---
 name: Auchan Pro
-description: 'The Auchan Pro projet architecture'
+description: ''
 keywords: ''
-type: Default
-documentation: ''
+type: Magento
+documentation: Doc!
 images:
 - name: Apache
   source: 10.0.0.1:5000/library/auchanpro-apache:latest
   category: Front
   type: Default
+  expose:
+  - '80'
+  ports:
+  - host_port: '8081'
+    container_port: '80'
+    proto: TCP
   volumes:
   - host_path: "/home/core/shared/auchan_pro"
     container_path: "/var/auchan_pro"
