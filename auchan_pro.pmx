@@ -1,12 +1,13 @@
 ---
 name: Auchan Pro
-description: ''
+description: 'The Auchan Pro projet architecture'
 keywords: ''
 type: Default
 documentation: ''
 images:
-- name: pro
+- name: Apache
   source: 10.0.0.1:5000/library/auchanpro-apache:latest
+  category: Front
   type: Default
   volumes:
   - host_path: "/home/core/shared/auchan_pro"
