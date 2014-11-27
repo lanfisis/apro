@@ -1,14 +1,14 @@
 ---
 name: Auchan Pro
-description: ''
+description: 'Auchan Pro website architecture'
 keywords: ''
 type: Magento
-documentation: Doc!
+documentation: 'Doc!'
 images:
 - name: Apache
   source: 10.0.0.1:5000/library/auchanpro-apache:latest
   category: Front
-  type: Default
+  type: Apache
   expose:
   - '80'
   ports:
