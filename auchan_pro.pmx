@@ -19,3 +19,14 @@ images:
   - host_path: "/home/core/shared/auchan_pro"
     container_path: "/var/auchan_pro"
   command: "/etc/my_init.d/run.sh"
+- name: Php-Fpm
+  source: 10.0.0.1:5000/library/auchanpro-php5-fpm:latest
+  category: Front
+  type: Default
+  expose:
+  - '9000'
+  ports:
+  - host_port: '8082'
+    container_port: '9000'
+    proto: TCP
+  command: "/etc/my_init.d/run.sh"
