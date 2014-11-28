@@ -15,6 +15,9 @@ images:
   - host_port: '8081'
     container_port: '80'
     proto: TCP
+  links:
+  - service: Php-Fpm
+    alias: phpfpm
   volumes:
   - host_path: "/home/core/shared/auchan_pro"
     container_path: "/var/auchan_pro"
