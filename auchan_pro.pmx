@@ -18,6 +18,8 @@ images:
   links:
   - service: Php-Fpm
     alias: phpfpm
+  - service: Mysql
+    alias: mysql
   volumes:
   - host_path: "/home/core/shared/auchan_pro"
     container_path: "/var/auchan_pro"
