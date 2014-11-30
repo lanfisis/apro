@@ -7,7 +7,7 @@ documentation: 'Doc!'
 images:
 - name: Apache
   source: 10.0.0.1:5000/library/auchanpro-apache:latest
-  category: Front
+  category: Web
   type: Apache
   expose:
   - '80'
