@@ -45,4 +45,7 @@ images:
   - host_port: '8086'
     container_port: '3306'
     proto: TCP
+  volumes:
+  - host_path: "/home/core/shared/auchan_pro/databases"
+    container_path: "/var/lib/mysql"
   command: "/etc/my_init.d/run.sh"  
