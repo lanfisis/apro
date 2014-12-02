@@ -38,9 +38,6 @@ images:
   source: 10.0.0.1:5000/library/auchanpro-mysql:latest
   category: BDD
   type: MySQL
-  links:
-  - service: Apache
-    alias: apache
   expose:
   - '3306'
   command: "/etc/my_init.d/run.sh"  
