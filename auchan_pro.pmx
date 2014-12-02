@@ -41,4 +41,8 @@ images:
   type: MySQL
   expose:
   - '3306'
+  ports:
+  - host_port: '8086'
+    container_port: '3306'
+    proto: TCP
   command: "/etc/my_init.d/run.sh"  
