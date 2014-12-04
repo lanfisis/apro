@@ -73,7 +73,7 @@ images:
     alias: redis
   environment:
   - variable: REDMON_ADDRESS
-    value: 'panamax.local'
+    value: '0.0.0.0'
   - variable: REDMON_PORT
     value: '4567'
   - variable: REDMON_REDIS_ADDRESS
