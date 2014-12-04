@@ -68,4 +68,7 @@ images:
   - host_port: '8888'
     container_port: '8888'
     proto: TCP
+  links:
+  - service: Redis
+    alias: redis
   command: "/etc/my_init.d/run.sh"  
