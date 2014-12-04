@@ -58,3 +58,14 @@ images:
   expose:
   - '6379'
   command: "/etc/my_init.d/run.sh"  
+- name: Nkrode
+  source: 10.0.0.1:5000/library/auchanpro-nkrode:latest
+  category: Monitoring
+  type: MediaWiki
+  expose:
+  - '8888'
+  ports:
+  - host_port: '8888'
+    container_port: '8888'
+    proto: TCP
+  command: "/etc/my_init.d/run.sh"  
