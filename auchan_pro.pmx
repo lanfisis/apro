@@ -58,17 +58,26 @@ images:
   expose:
   - '6379'
   command: "/etc/my_init.d/run.sh"  
-- name: Nkrode
-  source: 10.0.0.1:5000/library/auchanpro-nkrode:latest
+- name: Redmon
+  source: 10.0.0.1:5000/library/common-redmon:latest
   category: Monitoring
   type: MediaWiki
   expose:
-  - '8888'
+  - '4567'
   ports:
-  - host_port: '8888'
-    container_port: '8888'
+  - host_port: '4567'
+    container_port: '4567'
     proto: TCP
   links:
   - service: Redis
     alias: redis
+  environment:
+  - variable: REDMON_ADDRESS
+    value: 'panamax.local'
+  - variable: REDMON_PORT
+    value: '4567'
+  - variable: REDMON_REDIS_ADDRESS
+    value: 'redis'
+  - variable: REDMON_REDIS_PORT
+    value: '6379'
   command: "/etc/my_init.d/run.sh"  
