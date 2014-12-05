@@ -6,7 +6,7 @@ type: Magento
 documentation: 'Doc!'
 images:
 - name: Apache
-  source: 10.0.0.1:5000/library/auchanpro-apache:latest
+  source: 172.16.205.88:5000/library/auchanpro-apache:latest
   category: Web
   type: Apache
   expose:
@@ -23,7 +23,7 @@ images:
     container_path: "/var/auchan_pro"
   command: "/etc/my_init.d/run.sh"
 - name: Php-Fpm
-  source: 10.0.0.1:5000/library/auchanpro-php5-fpm:latest
+  source: 172.16.205.88:5000/library/auchanpro-php5-fpm:latest
   category: Web
   type: Default
   expose:
@@ -38,7 +38,7 @@ images:
     container_path: "/var/auchan_pro"
   command: "/etc/my_init.d/run.sh"
 - name: Mysql
-  source: 10.0.0.1:5000/library/auchanpro-mysql:latest
+  source: 172.16.205.88:5000/library/auchanpro-mysql:latest
   category: BDD
   type: MySQL
   expose:
@@ -52,14 +52,14 @@ images:
     container_path: "/var/lib/mysql"
   command: "/etc/my_init.d/run.sh"  
 - name: Redis
-  source: 10.0.0.1:5000/library/auchanpro-redis:latest
+  source: 172.16.205.88:5000/library/auchanpro-redis:latest
   category: BDD
   type: Default
   expose:
   - '6379'
   command: "/etc/my_init.d/run.sh"  
 - name: Redmon
-  source: 10.0.0.1:5000/library/common-redmon:latest
+  source: 172.16.205.88:5000/library/common-redmon:latest
   category: Monitoring
   type: MediaWiki
   expose:
