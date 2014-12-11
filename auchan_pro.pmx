@@ -12,7 +12,7 @@ images:
   expose:
   - '80'
   ports:
-  - host_port: '8081'
+  - host_port: '80'
     container_port: '80'
     proto: TCP
   links:
